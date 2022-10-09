@@ -186,7 +186,7 @@ def heslo(pocet):
         for i in range(4):
             letters = znaky[i]
             final_string += ''.join(random.choice(letters) for i in range(3))
-        print(f"{u +1 }. náhodné heslo: {final_string}")
+        print(f"{u +1 }. nahodne heslo: {final_string}")
         final_string = ""
 
 heslo(2)

@@ -35,6 +35,7 @@ while dec != 0:
 print(f"Binarni cislo = {bin}")
 
 # Smyčka pro ukončení programu zadáním příkazu q (quit)
+'''
 command = ""
 while command.lower() != "q":
     command = input(">")
@@ -47,3 +48,13 @@ while True:
     if command.lower() == "q":
         break
 print("Program ukoncen")
+'''
+
+def ukonciProgram():
+    zadano = ''
+    while 'q' != zadano:
+        zadano = input("Ukonci zadanim pismene\'q\': ")
+
+
+
+ukonciProgram()

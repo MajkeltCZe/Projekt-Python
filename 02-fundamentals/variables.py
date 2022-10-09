@@ -66,12 +66,25 @@ hexadecimal = 0x12c #Hexadecimal Literal
 
 '''Úkol B'''
 #? Vypište do poznámky všechny bitové operátory, které nabízí Python
+# & (bitový součin), | (bitový součet), ~ (negace bitů), ^ (xor), >> (bitový posun vpravo), << (bitový posun vlevo)
+
 #? Do proměnné myself_binary uložte binární číslo vytvořené na základě osmi prvních znaků z vašeho jména a příjmení (souhláska = 1, samohláska 0)
 #? Příklad - HildaDok: 10110101
+myself_binary = 0b10110101
 #? Vypište toto binární číslo v desítkové soustavě
+print(int(myself_binary))
 #? Pro toto binární číslo proveďte nejprve bitový posun o 2 bity vpravo, poté vypište výsledek v desítkové soustavě
+myself_binary >>= 2
+print(int(myself_binary))
 #? Proveďte bitový součin hexadecimálního čísla "1A" a vašeho binárního čísla a opět vypište v desítkové soustavě
+c1 = int(0x1A)
+c2 = int(myself_binary)
+res = c1 & c2
+print(res)
+print(int(0x1A) & int(myself_binary))
 #? Výsledek zobrazte jako formátovaný řetězec - např. "Binární součin čísla 0b11010 a 0b10110101 je 0b10000"
+# print('binární součin čísla {} a {} je {}'.format(bin(c1),bin(c2),bin(res)))
+print(f'binární součin čísla {bin(c1)} a {bin(c2)} je {bin(res)}')
 
 
 '''Python plně podporuje operace v plovoucí řádové čárce (tj. desetinná čísla). 
