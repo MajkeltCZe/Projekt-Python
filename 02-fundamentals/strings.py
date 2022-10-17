@@ -178,15 +178,16 @@ souslovi("To je promenna v Pythonu")
 
 #3. úkol
 import random
-import string
 def heslo(pocet):
     znaky = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ","abcdefghijklmnopqrstuvwxyz","!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~","0123456789"]
+    pocty = [3,3,1,3]
+
     final_string = ""
     for u in range(pocet):
         for i in range(4):
             letters = znaky[i]
-            final_string += ''.join(random.choice(letters) for i in range(3))
-        print(f"{u +1 }. nahodne heslo: {final_string}")
+            final_string += ''.join(random.choice(letters) for k in range(pocty[i]))
+        print(f"{u +1}. nahodne heslo: {final_string}")
         final_string = ""
 
-heslo(2)
+heslo(8)

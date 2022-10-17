@@ -35,15 +35,15 @@ def mesic(hmotnost):
 '''
 funkce vypočítá, čas ve vteřinách, za jak dlouho se dá dostat rychlostí světla
 '''
-def cestaKMesici():
+def cesta_k_mesici():
     return MOON_TO_EARTH / SPEED_OF_LIGHT
 
 '''
 funkce vypočítá, za kolik vteřin zvládeš určitou vzdálenost v metrech, 
 pokud bychom cestovali rychlosti světla ve vakuu
 '''
-def cestovaniSvetlem(vzdalenost):
+def cestovani_svetlem(vzdalenost):
     return vzdalenost / SPEED_OF_LIGHT
 
-def cestovaniZvukem(vzdalenost):
+def cestovani_zvukem(vzdalenost):
     return vzdalenost / SPEED_OF_SOUND
