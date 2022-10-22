@@ -94,3 +94,51 @@ child3          Linus               2011
 ---------------------------------------------
 Počet záznamů: 3
 '''
+
+
+videogames = {
+  'game1' : {
+    'name': 'Life is strange',
+    'year': 2015,
+    'played': True,
+    'genre': ('adventure','epizodic'),
+    'characters': {'Max','Chloe','Kate','Warren'},
+    'score': [4.5,4.0]
+  },
+  'game2': {
+    'name': 'Minecraft',
+    'year': 2011,
+    'played': True,
+    'genre': ('sandbox','adventure'),
+    'characters': {'Steve','Creeper','Zombie'},
+    'score': [4.0, 4.5,4.7]
+  },
+  'game3': {
+    'name': 'Last of Us',
+    'year': 2013,
+    'played': False,
+    'genre': ('action', 'adventure'),
+    'characters': {'Joel', 'Ellie'},
+    'score': [4.5, 4.2]
+  }
+}
+
+videogames['game3']['characters'].add('Timmy')
+del videogames['game2']['year']
+
+
+
+print("\nslovnik videogames")
+print("-" * 145)
+print ("{:<10} {:<20} {:<15} {:<15} {:<30} {:<37} {:<10}".format('game','name','year','played','genre','characters','score'))
+print("-" * 145)
+for k, info in videogames.items():
+  print("{:<10} {:<20} {:<15} {:<15} {:<30} {:<37} {:<10}".format(k,str(info['name']),str(info['year']) if 'year' in info else '----',str(info['played']),
+  ','.join(str(x) for x in info['genre']),','.join(str(x) for x in info['characters']),','.join(str(x) for x in info['score'])))
+print("-" * 145)
+print("Počet záznamů:", len(videogames))
+
+
+
+
+

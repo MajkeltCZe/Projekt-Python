@@ -285,6 +285,23 @@ print(f'\tSbalení seznamů do proměnné values: {values}\n')
 from random import randint
 
 print(f'\n*************************************\nCvičení 2\n*************************************')
+import random
+import string
+
+hundreds = [i for i in range (1,2001) if i % 200 == 0]
+print(hundreds)
+
+ascii = [random.choice(string.ascii_uppercase) for i in range (50)]
+print(ascii,len(ascii))
+
+hundreds = hundreds[3:-3]
+print(hundreds)
+
+unique = [chr for chr in ascii if ascii.count(chr)  == 1]
+print(unique)
+
+combine = list(zip(hundreds, ascii[:len(hundreds)]))
+print(combine)
 
 
 
@@ -298,3 +315,26 @@ print(f'\n*************************************\nCvičení 2\n******************
 # Záznamy budou seřazeny podle věku (sestupně).
 
 print(f'\n*************************************\nCvičení 3\n*************************************')
+new =  [
+('Josef', 37, 'muž'),
+('Ingrid', 58, 'žena'),
+('Marion', 41, 'žena'),
+('Edgar', 68, 'muž'),
+    ]
+persons.extend(new)
+print(persons)
+
+
+women = [g for g in persons if g[2] == 'žena']
+for i in range(0,len(women)):
+    print([item[0] for item in women][i] + '\n' + '-' * len([item[0] for item in women][i]))
+
+
+ipeople = [i for i in persons if i[0].count('i')  == 1 or i[0].count('I') == 1]
+ipeople.sort(key=sort_item,reverse=True)
+print("index;jmeno;vek;pohlavi")
+i = 0
+while i < len(ipeople):
+  print(f"{str('%d' %  i) + ';' + ';'.join(map(str, ipeople[i]))}")
+  i += 1
+

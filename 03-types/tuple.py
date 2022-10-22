@@ -1,6 +1,6 @@
 '''
 Tuples - neměnitelné n-tice hodnot (seřazený seznam prvků)
-In Python tuples are written with round brackets.
+N-tice (Tuples) jsou psány v ()
 '''
 
 # Vytvoření tuples
@@ -12,7 +12,7 @@ chars = tuple('Hello world')
 print('chars: ', chars)
 print('Type(chars): ',type(chars))
 
-# To create a tuple with only one item, you have add a comma after the item, unless Python will not recognize the variable as a tuple.
+# K vytvoření tuple s pouze jedním prvkem se musí přidat čárka po prvku, jinak Python to nerozpozná jako proměnnou n-tice (tuple).
 colors = ('red',)
 print('colors: ', colors)
 
@@ -20,16 +20,16 @@ print('colors: ', colors)
 print(f'chars + numbers: {chars + numbers}')
 
 # Výpis hodnot 
-# You can specify a range of indexes by specifying where to start and where to end the range.
-# When specifying a range, the return value will be a new tuple with the specified items.
+# Lze specifikovat rozsah (range) indexů , když se určí kde začít a kde skončit
+#Když se specifikuje rozsah (range), návratová hodnota bude nová n-tince (tuple) se specifickými prvky.
 print(f'chars[2:5]: {chars[2:5]}')
 
-# Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second last item etc.
-# Specify negative indexes if you want to start the search from the end of the tuple: 
-# This example returns the items from index -4 (included) to index -1 (excluded)
+#Záporná indexace znamená, že se začíná od konce, -1 je poslední prvek, -2 je předposlední prvek atd.
+# Specifikuj záporné indexy jestli chceš začít vyhledávat od konce n-tice (tuple):
+# Tento příklad vrací prvky od indexu -4 (také zahrnut) do indexu -1 (není zahrnut)
 print(f'chars[-4:-1]: {chars[-4:-1]}')
 
-# To determine how many items a tuple has, use the len() method:
+# K zjištění kolik prvků n-tice (tuple) má se využívá metoda len():
 print(f'len(chars): {len(chars)}')
 
 # Zjištění prvního výskytu a počtu výskytu prvku

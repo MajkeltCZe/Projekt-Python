@@ -1,3 +1,5 @@
 venv
 .idea
 studenti
+* .pyc
+_pycache_
