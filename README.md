@@ -1,2 +1,2 @@
-"# projekt-python"
-"# zaklady v pythonu"
+" projekt-python"
+" zaklady v pythonu"

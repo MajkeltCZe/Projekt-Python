@@ -288,18 +288,23 @@ print(f'\n*************************************\nCvičení 2\n******************
 import random
 import string
 
+#a)
 hundreds = [i for i in range (1,2001) if i % 200 == 0]
 print(hundreds)
 
+#b)
 ascii = [random.choice(string.ascii_uppercase) for i in range (50)]
 print(ascii,len(ascii))
 
+#c)
 hundreds = hundreds[3:-3]
 print(hundreds)
 
+#d)
 unique = [chr for chr in ascii if ascii.count(chr)  == 1]
 print(unique)
 
+#e)
 combine = list(zip(hundreds, ascii[:len(hundreds)]))
 print(combine)
 
@@ -313,23 +318,33 @@ print(combine)
 # obsahující ve jméně písmeno "i". Obsah listu ipeople poté převeďte do podoby řetězce, který bude odpovídat struktuře csv souboru.
 # Kromě jména, věku a pohlaví v něm budou vypsána i čísla indexů (jako 1. sloupec). Oddělovačem bude středník.
 # Záznamy budou seřazeny podle věku (sestupně).
-
 print(f'\n*************************************\nCvičení 3\n*************************************')
-new =  [
-('Josef', 37, 'muž'),
-('Ingrid', 58, 'žena'),
-('Marion', 41, 'žena'),
-('Edgar', 68, 'muž'),
-    ]
-persons.extend(new)
+
+#a)
+# persons.append(('Tomáš',17,'muž'))
+# persons.insert(1,('Sofja',18,'žena'))
+# persons += ('Růženka',17,'žena'), ('Michael',17,'muž')
+persons.extend([('Josef', 37, 'muž'),('Ingrid', 58, 'žena'),('Marion', 41, 'žena'),('Edgar', 68, 'muž')])
 print(persons)
 
+def vypis(lis):
+    result = ''
+    for item in lis:
+        result += f'{item[0]}\n{"-" * len(item[0])}\n'
+    return result
 
-women = [g for g in persons if g[2] == 'žena']
-for i in range(0,len(women)):
-    print([item[0] for item in women][i] + '\n' + '-' * len([item[0] for item in women][i]))
+
+#b)
+women = list(filter(lambda item: item[2]  == 'žena', persons))
+# women = [g for g in persons if g[2] == 'žena']
+# for i in range(0,len(women)):
+   # print([item[0] for item in women][i] + '\n' + '-' * len([item[0] for item in women][i]))
+print(vypis(women))
 
 
+
+
+#c)
 ipeople = [i for i in persons if i[0].count('i')  == 1 or i[0].count('I') == 1]
 ipeople.sort(key=sort_item,reverse=True)
 print("index;jmeno;vek;pohlavi")
